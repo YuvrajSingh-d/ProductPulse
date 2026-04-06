@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  color: white;
+  font-family: Arial;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: black;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+.footer {
+  padding: 40px;
+  border-top: 1px solid #222;
+}
+ .products {
+  padding: 50px;
+}
+
+.products h2 {
+  margin-bottom: 20px;
+}
+
+#wishlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+}

@@ -1,33 +1,51 @@
-const API_URL = "https://dummyjson.com/products";
+const API = "https://dummyjson.com/products?limit=50";
 
-const productsContainer = document.getElementById("products");
-const loader = document.getElementById("loader");
+async function loadProducts() {
+  const res = await fetch(API);
+  const data = await res.json();
 
-async function fetchProducts() {
-  try {
-    const response = await fetch(API_URL);
-    const data = await response.json();
+  const container = document.getElementById("products");
 
-    const products = data.products;
-
-    displayProducts(products);
-
-    loader.style.display = "none";
-
-  } catch (error) {
-    loader.innerText = "Failed to load products";
+  if (container) {
+    container.innerHTML = data.products.map(p => `
+      <div class="card">
+        <img src="${p.thumbnail}">
+        <h3>${p.title}</h3>
+        <p>₹${p.price}</p>
+      </div>
+    `).join("");
   }
 }
 
-function displayProducts(products) {
-  productsContainer.innerHTML = products.map(product => `
+function loadWishlist() {
+  const container = document.getElementById("wishlist");
+  if (!container) return;
+
+  const list = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  container.innerHTML = list.map(p => `
     <div class="card">
-      <img src="${product.thumbnail}" alt="${product.title}">
-      <h3>${product.title}</h3>
-      <p>Price: ₹${product.price}</p>
-      <p>Rating: ⭐ ${product.rating}</p>
+      <h3>${p.title}</h3>
     </div>
   `).join("");
 }
 
-fetchProducts();
+function loadCart() {
+  const container = document.getElementById("cart");
+  if (!container) return;
+
+  const list = JSON.parse(localStorage.getItem("cart")) || [];
+
+  container.innerHTML = list.map(p => `
+    <div class="card">
+      <h3>${p.title}</h3>
+      <p>₹${p.price}</p>
+    </div>
+  `).join("");
+}
+
+loadProducts();
+loadWishlist();
+loadCart();
+
+
