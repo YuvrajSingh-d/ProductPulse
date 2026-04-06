@@ -1,0 +1,26 @@
+ .login-box {
+  width: 300px;
+  margin: 120px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-box h2 {
+  text-align: center;
+}
+
+.login-box input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-box button {
+  padding: 10px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

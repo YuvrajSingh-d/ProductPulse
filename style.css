@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,7 +33,7 @@ body {
   margin: 0 20px;
   text-decoration: none;
   color: #ccc;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
 .nav a:hover {
@@ -116,11 +116,49 @@ body {
   transform: scale(1.05);
 }
 
+.products {
+  padding: 50px;
+}
+
+.products h2 {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   padding: 50px;
-  background: black;
   border-top: 1px solid #222;
 }
 
