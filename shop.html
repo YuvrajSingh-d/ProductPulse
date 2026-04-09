@@ -2,35 +2,61 @@
 <html>
 <head>
   <title>Shop - ProductPulse</title>
-  <link rel="stylesheet" href="CSS/shop.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./CSS/shop.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo">
-      <a href="index.html" style="text-decoration: none; color: whitesmoke;">ProductPulse</a>
-    </div>
+<header class="header">
+  <div class="logo">
+    <a href="index.html">ProductPulse</a>
+  </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="wishlist.html">Wishlist</a>
-      <a href="cart.html">Cart</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
 
-<section class="products">
-  <h2>Shop Products</h2>
-  <div id="products"></div>
+<!-- 🔍 TOP BAR -->
+<section class="shop-top">
+  <input type="text" id="search" placeholder="Search products...">
+
+  <select id="sort">
+    <option value="">Sort</option>
+    <option value="low">Price Low → High</option>
+    <option value="high">Price High → Low</option>
+    <option value="rating">Rating</option>
+  </select>
+</section>
+
+<!-- 🧱 MAIN LAYOUT -->
+<section class="shop-container">
+
+  <!-- FILTERS -->
+  <aside class="filters">
+    <h3>Filters</h3>
+
+    <select id="category">
+      <option value="all">All Categories</option>
+    </select>
+
+  </aside>
+
+  <!-- PRODUCTS -->
+  <div class="products">
+    <div id="products"></div>
+  </div>
+
 </section>
 
 <footer class="footer">
   <div class="footer-left">
     <h2>ProductPulse</h2>
-    <p>Where quality meets performance</p>
-    <small>© 2026 ProductPulse</small>
+    <p>Where price meets quality.</p>
   </div>
 </footer>
 

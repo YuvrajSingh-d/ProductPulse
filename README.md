@@ -75,7 +75,9 @@ The objective of this project is to demonstrate:
 * Local Storage
 
 ---
+
 📂 Project Structure
+
 ProductPulse/
 │
 ├── CSS/
@@ -93,6 +95,7 @@ ProductPulse/
 ├── style.css
 ├── script.js
 ├── README.md
+
 ---
 
 ## ▶️ Setup Instructions

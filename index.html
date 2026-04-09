@@ -6,7 +6,7 @@
 </head>
 <body>
 
-  <header class="header">
+  <header class="header hero-header">
     <div class="logo">
       <a href="index.html" style="text-decoration: none; color: whit;">ProductPulse</a>
     </div>
@@ -20,43 +20,63 @@
     </nav>
   </header>
 
-  <section class="hero">
+ <section class="hero">
     <div class="hero-content">
       <h1>All Products.</h1>
       <h1>Real prices.</h1>
+      <br>
       <p>Find everything at the best possible price and quality.</p>
+      <br>
       <div class="hero-buttons">
-        <button class="primary">Shop Now</button>
+        <a href="shop.html" class="primary">Shop Now</a>
         <button class="secondary">Contact Us</button>
       </div>
     </div>
-  </section>
-
-  <section class="categories">
-
-    <div class="category">
+  </section> 
+  
+  
+  <section class="split-section">
+    
+    <div class="split">
       <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-      <div class="category-text">
-        <h2>Performance Gear</h2>
-        <p>Built for speed and precision</p>
-      </div>
-    </div>
 
-    <div class="category">
+    <div class="split-text">
+      <h2>Performance Gear</h2>
+      <p>
+        Built for speed and precision. Find the best performance gear 
+        for your needs at unbeatable prices.
+      </p>
+      <button class="primary" onclick="goToShop()">Shop Now</button>
+    </div>
+  </div>
+
+  <div class="split reverse">
       <img src="https://i.pinimg.com/control1/1200x/d9/82/f8/d982f83fb6b7e31aa3c2c7b52a87cc90.jpg">
-      <div class="category-text">
-        <h2>Kitchen Essentials</h2>
-        <p>Keep everything in stock from grocery to kitchenware</p>
-      </div>
-    </div>
 
-    <div class="category">
-      <img src="https://img.freepik.com/premium-photo/flat-lay-sleek-black-tech-devices-including-laptop-phones-mouse-wireless-speaker_14117-707268.jpg">
-      <div class="category-text">
-        <h2>Tech Accessories</h2>
-        <p>Upgrade your experience with latest phones and laptops</p>
-      </div>
+    <div class="split-text">
+      <h2>Kitchen Essentials</h2>
+      <p>
+        Keep everything in stock from grocery to cookware. 
+        Find the best products for your kitchen at unbeatable prices.
+      </p>
+      <button class="primary" onclick="goToShop()">Shop Now</button>
     </div>
+  </div>
+
+  <div class="split">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+
+    <div class="split-text">
+      <h2>Tech Accessories</h2>
+      <p>
+        Upgrade your setup with premium accessories built for 
+        performance and everyday use.
+      </p>
+      <button class="primary" onclick="goToShop()">Shop Now</button>
+    </div>
+  </div>
+
+</section>
 
   </section>
   <footer class="footer">
@@ -96,8 +116,7 @@
   </div>
 
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
-
 
