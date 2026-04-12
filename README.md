@@ -2,94 +2,72 @@
 
 ## 📌 Project Idea
 
-**Project Name:** ProductPulse
-
-ProductPulse is a modern e-commerce web application that allows users to browse, explore, and interact with a variety of products. The application focuses on delivering a clean, premium UI along with dynamic product data fetched from a public API.
+ProductPulse is a modern e-commerce web application that allows users to browse and explore products using real-time data from a public API.
 
 ---
 
-## 🔗 Public API Selection
+## 🔗 API Used
 
-**API:** DummyJSON Products API
-**Endpoint:** https://dummyjson.com/products
-
-This API provides product-related data such as title, price, category, rating, and images. It is used to dynamically render products on the website.
+DummyJSON Products API  
+https://dummyjson.com/products
 
 ---
 
 ## 📌 Overview
 
-ProductPulse is a multi-page web application designed with a modular frontend architecture. It enables users to explore products, view details, and interact with features like wishlist and cart.
-
-The project emphasizes:
-
-* Clean UI/UX design
-* Structured code organization
-* Dynamic data handling
+This project is a multi-page frontend application built with a modular architecture. It focuses on clean UI, dynamic data rendering, and structured code organization.
 
 ---
 
 ## 🎯 Objective
 
-The objective of this project is to demonstrate:
-
-* Integration of a public API using Fetch API
-* Use of JavaScript array methods (`map`, `filter`, `sort`)
-* Dynamic rendering of products
-* Multi-page navigation
-* Modular CSS architecture
-* Interactive UI components
+- Fetch and display product data from an API
+- Implement search, filtering, and sorting
+- Build a responsive multi-page UI
+- Maintain clean and modular code
 
 ---
 
 ## ✨ Features Implemented
 
-* Multi-page structure (Home, Shop, Wishlist, Cart, Login)
-* Responsive navigation bar across all pages
-* Dynamic product fetching from API
-* Product display using reusable card layout
-* Wishlist system using localStorage
-* Cart structure (ready for integration)
-* Clean and consistent dark-themed UI
-* Modular CSS (separate files for each page)
+- Multi-page structure (Home, Shop, Login)
+- Dynamic product fetching
+- Product grid layout with reusable cards
+- Category filtering
+- Sorting (price and rating)
+- Search (title + description)
+- Product count display
+- Clean dark UI
 
 ---
 
 ## 🚧 Features In Progress
 
-* Add to Cart functionality
-* Wishlist toggle from product cards
-* Search functionality (debounced)
-* Filtering by category
-* Sorting (price and rating)
-* Product detail view (modal or page)
+- Product detail page
+- UI animations
+- Advanced filtering
 
 ---
 
 ## 🛠 Technologies Used
 
-* HTML
-* CSS (Modular Structure)
-* JavaScript (ES6)
-* Fetch API
-* Local Storage
+- HTML
+- CSS (Modular)
+- JavaScript (ES6)
+- Fetch API
 
 ---
 
-📂 Project Structure
+## 📂 Structure
 
 ProductPulse/
 │
 ├── CSS/
-│   ├── cart.css
 │   ├── login.css
 │   ├── shop.css
-│   └── wishlist.css
 │
 ├── index.html
 ├── shop.html
-├── wishlist.html
-├── cart.html
 ├── login.html
 │
 ├── style.css
@@ -98,36 +76,17 @@ ProductPulse/
 
 ---
 
-## ▶️ Setup Instructions
+## ▶️ Run Project
 
-1. Clone the repository
-2. Navigate to the project folder
-3. Open `index.html` in a web browser
+Open `index.html` in browser
 
 ---
 
-## ⚡ Implementation Approach
+## ⚡ Key Concepts
 
-* Products are fetched using the Fetch API
-* Data is rendered dynamically using JavaScript
-* LocalStorage is used for wishlist and cart handling
-* UI is divided into reusable sections (navbar, footer, cards)
-* CSS is modularized for better maintainability and debugging
-
----
-
-## 📅 Feasibility
-
-The project is feasible within the given timeline. Core UI and structure have already been implemented, and remaining features are incremental enhancements based on the current foundation.
-
----
-
-## 🚀 Future Enhancements
-
-* Full cart system with quantity management
-* Authentication system
-* Backend integration
-* Payment gateway integration
-* Advanced filtering and search
+- API integration
+- Dynamic DOM rendering
+- Filtering & sorting logic
+- Clean UI architecture
 
 ---

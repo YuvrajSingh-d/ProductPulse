@@ -2,56 +2,105 @@ const API = "https://dummyjson.com/products?limit=300";
 
 let allProducts = [];
 
+/* ELEMENTS */
+const container = document.getElementById("products");
+const stats = document.getElementById("productStats");
+const searchInput = document.getElementById("search");
+const categorySelect = document.getElementById("category");
+const sortSelect = document.getElementById("sort");
 
-fetch(API)
-  .then(res => res.json())
-  .then(data => {
-    allProducts = data.products;
+/* LOADING */
+if (container) {
+  container.innerHTML = "<p>Loading products...</p>";
+}
 
-    const container = document.getElementById("products");
+/* FETCH DATA */
+Promise.all([
+  fetch(API).then(res => res.json()),
+  fetch("https://dummyjson.com/products/category-list").then(res => res.json())
+])
+.then(([productData, categories]) => {
 
-    if (container) {
-      container.innerHTML = allProducts.map(p => `
-        <div class="card">
-          <img src="${p.thumbnail}">
-          <h3>${p.title}</h3>
-          <p>₹${p.price}</p>
-          <p>⭐ ${p.rating}</p>
+  allProducts = productData.products;
+
+  /* LOAD CATEGORIES */
+  if (categorySelect) {
+    categorySelect.innerHTML =
+      `<option value="all">All Categories</option>` +
+      categories.map(c => `<option value="${c}">${c}</option>`).join("");
+  }
+
+  renderProducts(allProducts);
+})
+.catch(() => {
+  if (container) {
+    container.innerHTML = "<p>❌ Failed to load products</p>";
+  }
+});
+
+/* RENDER */
+function renderProducts(products) {
+  if (!container) return;
+
+  /* STATS */
+  if (stats) {
+    stats.textContent = `Showing ${products.length} products`;
+  }
+  
+  /* NO RESULT */
+  if (products.length === 0) {
+    container.innerHTML = "<p>No products found</p>";
+    return;
+  }
+
+  container.innerHTML = products.map(p => {
+
+    const stars = "⭐".repeat(Math.round(p.rating));
+
+    return `
+    <div class="card">
+
+      <div class="card-img">
+        <img src="${p.thumbnail}">
+      </div>
+
+      <div class="card-body">
+
+        <span class="badge">${p.category}</span>
+
+        <h3>${p.title}</h3>
+
+        <p class="desc">${p.description.slice(0, 60)}...</p>
+
+        <p class="rating">${stars} (${p.rating})</p>
+
+        <div class="card-footer">
+          <span class="price">₹${p.price}</span>
         </div>
-      `).join("");
-    }
 
+      </div>
 
-    const categorySelect = document.getElementById("category");
-
-    if (categorySelect) {
-      const categories = [...new Set(allProducts.map(p => p.category))];
-
-      categorySelect.innerHTML += categories.map(c =>
-        `<option value="${c}">${c}</option>`
-      ).join("");
-    }
-  });
-
-
+    </div>
+    `;
+  }).join("");
+}
 
 function applyFilters() {
   let filtered = [...allProducts];
 
-  const search = document.getElementById("search").value.toLowerCase();
-  const category = document.getElementById("category").value;
-  const sort = document.getElementById("sort").value;
+  const search = searchInput?.value.toLowerCase();
+  const category = categorySelect?.value;
+  const sort = sortSelect?.value;
 
   if (search) {
     filtered = filtered.filter(p =>
-      p.title.toLowerCase().includes(search)
+      p.title.toLowerCase().includes(search) ||
+      p.description.toLowerCase().includes(search)
     );
   }
 
   if (category !== "all") {
-    filtered = filtered.filter(p =>
-      p.category === category
-    );
+    filtered = filtered.filter(p => p.category === category);
   }
 
   if (sort === "low") {
@@ -66,33 +115,25 @@ function applyFilters() {
     filtered.sort((a, b) => b.rating - a.rating);
   }
 
-  const container = document.getElementById("products");
-
-  if (container) {
-    container.innerHTML = filtered.map(p => `
-      <div class="card">
-        <img src="${p.thumbnail}">
-        <h3>${p.title}</h3>
-        <p>₹${p.price}</p>
-        <p>⭐ ${p.rating}</p>
-      </div>
-    `).join("");
-  }
+  renderProducts(filtered);
 }
 
+searchInput?.addEventListener("input", applyFilters);
+categorySelect?.addEventListener("change", applyFilters);
+sortSelect?.addEventListener("change", applyFilters);
 
+function handleLogin() {
+  const email = document.getElementById("email")?.value;
 
-let timer;
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-document.getElementById("search")?.addEventListener("input", () => {
-  clearTimeout(timer);
-  timer = setTimeout(applyFilters, 400);
-});
-
-document.getElementById("category")?.addEventListener("change", applyFilters);
-document.getElementById("sort")?.addEventListener("change", applyFilters);
-
-
+  if (pattern.test(email)) {
+    alert("Login successful");
+    window.location.href = "index.html";
+  } else {
+    alert("Enter valid email");
+  }
+}
 
 function goToShop() {
   window.location.href = "shop.html";

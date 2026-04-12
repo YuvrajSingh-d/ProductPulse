@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Shop - ProductPulse</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="./CSS/shop.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/shop.css">
 </head>
 <body>
 
@@ -15,79 +15,39 @@
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
-    <a href="wishlist.html">Wishlist</a>
-    <a href="cart.html">Cart</a>
     <a href="login.html">Login</a>
   </nav>
 </header>
 
-<section class="shop-top">
+<div class="shop-top">
   <input type="text" id="search" placeholder="Search products...">
 
-  <select id="sort">
-    <option value="">Sort</option>
-    <option value="low">Price Low → High</option>
-    <option value="high">Price High → Low</option>
-    <option value="rating">Rating</option>
-  </select>
-</section>
-
-<section class="shop-container">
-
-  <aside class="filters">
-    <h3>Filters</h3>
-
+  <div class="top-controls">
     <select id="category">
       <option value="all">All Categories</option>
     </select>
 
-  </aside>
-
-  <div class="products">
-    <div id="products"></div>
+    <select id="sort">
+      <option value="default">Sort</option>
+      <option value="priceLow">Price Low → High</option>
+      <option value="priceHigh">Price High → Low</option>
+      <option value="rating">Rating</option>
+    </select>
   </div>
+</div>
 
-</section>
+<p class="stats" id="stats"></p>
 
-  <footer class="footer">
-
+<div id="products"></div>
+<footer class="footer">
   <div class="footer-left">
     <h2>ProductPulse</h2>
+    <br>
     <p>Where Price meets Quality.</p>
     <small>© 2026 ProductPulse. All rights reserved.</small>
   </div>
-
-  <div class="footer-links">
-
-    <div>
-      <h4>Home</h4>
-      <p>Shop</p>
-      <p>Cart</p>
-    </div>
-
-    <div>
-      <h4>Shop</h4>
-      <p>Electronics</p>
-      <p>Accessories</p>
-      <p>Premium Products</p>
-    </div>
-
-    <div>
-      <h4>About</h4>
-      <p>About Us</p>
-      <p>Guides</p>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <p><a href="mailto:abcx01594@gmail.com" style="color: white; text-decoration: none;">Email</a></p>
-    </div>
-
-  </div>
-
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>

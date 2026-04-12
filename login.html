@@ -2,69 +2,39 @@
 <html>
 <head>
   <title>Login</title>
+  <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="CSS/login.css">
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo">
-      <a href="index.html" style="text-decoration: none; color: whitesmoke;">ProductPulse</a>
-    </div>
+<header class="header">
+  <div class="logo">
+    <a href="index.html">ProductPulse</a>
+  </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="wishlist.html">Wishlist</a>
-      <a href="cart.html">Cart</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
 
 <section class="login-box">
   <h2>Login</h2>
-  <input type="text" placeholder="Email">
+  <input type="text" id="email" placeholder="Email">
   <input type="password" placeholder="Password">
-  <button>Login</button>
+  <button onclick="handleLogin()">Login</button>
 </section>
 
-  <footer class="footer">
-
+<footer class="footer">
   <div class="footer-left">
     <h2>ProductPulse</h2>
+    <br>
     <p>Where Price meets Quality.</p>
     <small>© 2026 ProductPulse. All rights reserved.</small>
   </div>
-
-  <div class="footer-links">
-
-    <div>
-      <h4>Home</h4>
-      <p>Shop</p>
-      <p>Cart</p>
-    </div>
-
-    <div>
-      <h4>Shop</h4>
-      <p>Electronics</p>
-      <p>Accessories</p>
-      <p>Premium Products</p>
-    </div>
-
-    <div>
-      <h4>About</h4>
-      <p>About Us</p>
-      <p>Guides</p>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <p><a href="mailto:abcx01594@gmail.com" style="color: white; text-decoration: none;">Email</a></p>
-    </div>
-
-  </div>
-
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,9 +1,12 @@
- .login-box {
-  width: 300px;
+.login-box {
+  width: 320px;
   margin: 120px auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .login-box h2 {
@@ -12,8 +15,10 @@
 
 .login-box input {
   padding: 10px;
-  border-radius: 5px;
-  border: none;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #000;
+  color: white;
 }
 
 .login-box button {
@@ -22,5 +27,5 @@
   color: black;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
 }
