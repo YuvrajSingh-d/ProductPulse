@@ -2,91 +2,103 @@
 
 ## 📌 Project Idea
 
-ProductPulse is a modern e-commerce web application that allows users to browse and explore products using real-time data from a public API.
+ProductPulse is a modern dark-themed e-commerce frontend application that allows users to browse and explore products using real-time data from a public API.
 
 ---
 
 ## 🔗 API Used
 
-DummyJSON Products API  
+DummyJSON Products API
 https://dummyjson.com/products
 
 ---
 
 ## 📌 Overview
 
-This project is a multi-page frontend application built with a modular architecture. It focuses on clean UI, dynamic data rendering, and structured code organization.
+This project is a multi-page frontend web application built with a **modular architecture**. It focuses on clean UI, responsive design, and dynamic product rendering using JavaScript.
 
 ---
 
 ## 🎯 Objective
 
-- Fetch and display product data from an API
-- Implement search, filtering, and sorting
-- Build a responsive multi-page UI
-- Maintain clean and modular code
+* Fetch and display product data from an API
+* Implement search, filtering, and sorting
+* Build a responsive multi-page UI
+* Maintain clean, modular, and reusable code
 
 ---
 
 ## ✨ Features Implemented
 
-- Multi-page structure (Home, Shop, Login)
-- Dynamic product fetching
-- Product grid layout with reusable cards
-- Category filtering
-- Sorting (price and rating)
-- Search (title + description)
-- Product count display
-- Clean dark UI
-
----
-
-## 🚧 Features In Progress
-
-- Product detail page
-- UI animations
-- Advanced filtering
+* Multi-page structure (Home, Shop, Login)
+* Dynamic product fetching using Fetch API
+* Product grid layout with reusable card components
+* Category filtering
+* Sorting (price & rating)
+* Search functionality (title + description)
+* Product count display
+* Clean dark-themed UI
+* Responsive layout
 
 ---
 
 ## 🛠 Technologies Used
 
-- HTML
-- CSS (Modular)
-- JavaScript (ES6)
-- Fetch API
+* HTML
+* CSS (Modular Structure)
+* JavaScript (ES6)
+* Fetch API
 
 ---
 
-## 📂 Structure
+## 📂 Project Structure
 
 ProductPulse/
 │
 ├── CSS/
-│   ├── login.css
+│   ├── style.css
 │   ├── shop.css
+│   ├── login.css
 │
 ├── index.html
 ├── shop.html
 ├── login.html
 │
-├── style.css
 ├── script.js
 ├── README.md
 
 ---
 
-## ▶️ Run Project
+## ▶️ How to Run
 
-Open `index.html` in browser
+1. Download or clone the repository
+2. Open `index.html` in your browser
+3. Navigate through pages using the navbar
+
+---
+
+## ⚡ Key Concepts Used
+
+* API Integration
+* Dynamic DOM Manipulation
+* Filtering and Sorting Logic
+* Modular CSS Architecture
+* Responsive Design
 
 ---
 
-## ⚡ Key Concepts
+## 🚀 Future Implementations
 
-- API integration
-- Dynamic DOM rendering
-- Filtering & sorting logic
-- Clean UI architecture
+* Product detail modal (quick view popup)
+* Hover overlay interactions on product cards
+* Advanced filters (price range, ratings, etc.)
+* Loading skeleton UI for better UX
+* Backend integration (authentication & database)
+* Cart and checkout functionality
+* Payment gateway integration
 
 ---
+
+## 📌 Author
+
+Yuvraj Singh
