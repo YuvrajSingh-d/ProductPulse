@@ -103,11 +103,11 @@ function applyFilters() {
     filtered = filtered.filter(p => p.category === category);
   }
 
-  if (sort === "low") {
+  if (sort === "priceLow") {
     filtered.sort((a, b) => a.price - b.price);
   }
 
-  if (sort === "high") {
+  if (sort === "priceHigh") {
     filtered.sort((a, b) => b.price - a.price);
   }
 
